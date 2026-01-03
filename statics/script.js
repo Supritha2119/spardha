@@ -33,41 +33,41 @@ document.addEventListener("click", function () {
     document.querySelectorAll(".sub-courses").forEach(item => item.classList.remove("active"));
 });
 
-// Get all slides
+
 const slides = document.querySelectorAll(".slider .slide");
 const prev = document.querySelector(".slider-nav .prev");
 const next = document.querySelector(".slider-nav .next");
 
 let currentIndex = 0;
 
-// Function to show slide
+
 function showSlide(index) {
     slides.forEach((slide, i) => {
-        slide.style.display = "none"; // hide all slides
+        slide.style.display = "none"; 
         slide.classList.remove("active");
     });
-    slides[index].style.display = "flex"; // show current slide
+    slides[index].style.display = "flex"; 
     slides[index].classList.add("active");
 }
 
-// Show first slide initially
+
 showSlide(currentIndex);
 
-// Next slide function
+
 function nextSlide() {
     currentIndex = (currentIndex + 1) % slides.length;
     showSlide(currentIndex);
 }
 
-// Previous slide function
+
 function prevSlide() {
     currentIndex = (currentIndex - 1 + slides.length) % slides.length;
     showSlide(currentIndex);
 }
 
-// Automatic slide every 5 seconds
+
 setInterval(nextSlide, 5000);
 
-// Arrow navigation
+
 next.addEventListener("click", nextSlide);
 prev.addEventListener("click", prevSlide);
