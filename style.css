@@ -298,10 +298,19 @@
     margin-right: 6px;
 }
 
+.footer-map h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-map iframe {
+    border-radius: 10px;
+}
+
 .footer-cta {
     display: inline-block;
-    margin: 15px 0;
-    padding: 10px 22px;
+    margin-top:48px ;
+    padding: 12px 32px;
     background: #2ecc71;
     color: #ffffff;
     border-radius: 30px;
@@ -318,7 +327,7 @@
 .footer-social {
     display: flex;
     gap: 12px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .footer-social a {
@@ -331,6 +340,7 @@
     align-items: center;
     justify-content: center;
     transition: 0.3s ease;
+    margin-top: 10px;
 }
 
 .footer-social a:hover {
