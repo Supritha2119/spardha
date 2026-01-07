@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+/* Section */
+.achievements {
+  padding: 80px 40px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* Title */
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #ddd;
+  margin-bottom: 50px;
+}
+
+/* Grid */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.achievement-card {
+  background: #111;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+  height: auto;
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Image */
+.achievement-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+/* Info */
+.info {
+  padding: 18px;
+  background: linear-gradient(180deg, #111, #1b1b1b);
+  text-align: center;
+}
+
+.info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.exam {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #ffcc70;
+}
+
+/* Rank */
+.rank {
+  display: inline-block;
+  margin-top: 10px;
+  background: #e63946;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rank.gold {
+  background: linear-gradient(45deg, gold, orange);
+  color: #000;
+}
+
+.back-home {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 15px;
+    background:rgb(5, 120, 158);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 20;
+}
+
+.back-home:hover {
+    background-color: #92c1f4;
+}
+
+.back-home i {
+    margin-right: 8px;
+}

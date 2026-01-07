@@ -1,4 +1,51 @@
 
+    setTimeout(() => {
+        document.getElementById("popupOverlay").style.display = "flex";
+    }, 7000);
+
+    function closePopup() {
+        document.getElementById("popupOverlay").style.display = "none";
+    }
+
+    document.getElementById("enquiryForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const course = document.getElementById("course").value;
+        const joining = document.getElementById("joining").value;
+
+        // Validation
+        if (name === "" || phone === "" || course === "" || joining === "") {
+            alert("Please fill all fields");
+            return;
+        }
+
+        if (!/^[0-9]{10}$/.test(phone)) {
+            alert("Enter valid 10-digit phone number");
+            return;
+        }
+
+       
+        const message = `Hello,
+Name: ${name}
+Phone: ${phone}
+Course Interested: ${course}
+Willing to Join: ${joining}`;
+
+      
+        const whatsappNumber = "91XXXXXXXXXX";
+
+        window.open(
+            `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+            "_blank"
+        );
+
+        closePopup();
+    });
+
+
+
 function toggleCourses() {
     const coursesMenu = document.getElementById("coursesMenu");
     const branchesMenu = document.getElementById("branchesMenu");
@@ -46,7 +93,7 @@ function showSlide(index) {
         slide.style.display = "none"; 
         slide.classList.remove("active");
     });
-    slides[index].style.display = "flex"; 
+    slides[index].style.display = "flex"; // show current slide
     slides[index].classList.add("active");
 }
 
@@ -71,3 +118,27 @@ setInterval(nextSlide, 5000);
 
 next.addEventListener("click", nextSlide);
 prev.addEventListener("click", prevSlide);
+
+
+const counters = document.querySelectorAll('.count');
+
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const speed = 80;
+
+    const increment = target / speed;
+
+    if (count < target) {
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, 30);
+    } else {
+      counter.innerText = target + '+';
+    }
+  };
+  updateCount();
+});
+
+
+

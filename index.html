@@ -10,8 +10,42 @@
 </head>
 <body>
 
+<!-- Popup Overlay -->
+<div id="popupOverlay" class="popup-overlay">
+    <div class="popup-form">
+        <span class="close-btn" onclick="closePopup()">×</span>
+
+        <h2>Enquiry Form</h2>
+
+        <form id="enquiryForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+
+            <input type="tel" id="phone" placeholder="Phone Number" maxlength="10" required>
+
+            <select id="course" required>
+                <option value="">Course Interested In</option>
+                <option>KAS Coaching</option>
+                <option>IAS Coaching</option>
+                <option>PSI Coaching</option>
+                <option>FDA / SDA Coaching</option>
+            </select>
+
+            <select id="joining" required>
+                <option value="">When are you willing to join?</option>
+                <option>Immediately</option>
+                <option>After 2 Month</option>
+                <option>After 3 Months</option>
+                <option>Later</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+
 <!-- Header & Navigation -->
-<header class="header">
+<header id="index" class="header">
     <div class="logo-area">
         <img src="images/logo.jpeg" alt="Sparda Academy Logo" width="120" height="auto">
         <span>Sri Spardha Academy</span>
@@ -19,12 +53,12 @@
 
     <nav class="nav">
         <ul class="nav-list">
-            <li><a href="/" title="Sri Spardha Academy Home">Home</a></li>
+            <li><a href="#index" title="Sri Spardha Academy Home">Home</a></li>
             
             <!-- Courses Dropdown -->
             <li class="dropdown" onclick="event.stopPropagation()">
                 <span class="dropbtn" onclick="toggleCourses()" title="Courses Offered by Sri Spardha Academy">
-                    Courses <i class="fa fa-chevron-down"></i>
+                    <a href="#course">Courses</a> <i class="fa fa-chevron-down"></i>
                 </span>
                 <ul class="dropdown-content" id="coursesMenu">
                     <li>
@@ -32,8 +66,8 @@
                             Government Exams <i class="fa fa-angle-down"></i>
                         </span>
                         <ul class="sub-courses">
-                            <li><a href="/courses/ssc" title="SSC Coaching at Sri Spardha Academy">SSC</a></li>
-                            <li><a href="/courses/banking" title="Banking Exam Coaching at Sri Spardha Academy">Banking</a></li>
+                            <li><a href="kas.html" title="KAS Coaching at Sri Spardha Academy">KAS</a></li>
+                            <li><a href="ips.html" title="Banking Exam Coaching at Sri Spardha Academy">Banking</a></li>
                             <li><a href="/courses/railway" title="Railway Exam Coaching at Sri Spardha Academy">Railway</a></li>
                             <li><a href="/courses/upsc" title="UPSC Coaching at Sri Spardha Academy">UPSC</a></li>
                             <li><a href="/courses/kpsc" title="KPSC Coaching at Sri Spardha Academy">KPSC</a></li>
@@ -42,18 +76,18 @@
                 </ul>
             </li>
              <li class="dropdown" onclick="event.stopPropagation()">
-                <span class="dropbtn" onclick="toggleBranches()">Branches <i class="fa fa-chevron-down"></i></span>
+                <span class="dropbtn" onclick="toggleBranches()"><a href="#branch">Branches</a> <i class="fa fa-chevron-down"></i></span>
                 <ul class="dropdown-content" id="branchesMenu">
-                    <li><a href="/branches/koramangala">Koramangala</a></li>
-                    <li><a href="/branches/vajarahalli">Vajarahalli</a></li>
-                    <li><a href="/branches/hoskote">Hoskote</a></li>
+                    <li><a href="koramangala.html">Koramangala</a></li>
+                    <li><a href="vajarahalli.html">Vajarahalli</a></li>
+                    <li><a href="hoskote.html">Hoskote</a></li>
                 </ul>
             </li>
 
-            <li><a href="/" title="About Sri Spardha Academy">About</a></li>
-            <li><a href="/" title="Our Successful Students">Our Students</a></li>
-            <li><a href="/" title="Review of Sri Spardha Academy">Reviews</a></li>
-            <li><a href="/" title="Contact Sri Spardha Academy">Contact</a></li>
+            <li><a href="#about" title="About Sri Spardha Academy">About</a></li>
+            <li><a href="#result" title="Our Successful Students">Achievements</a></li>
+            <li><a href="#reviews" title="Review of Sri Spardha Academy">Reviews</a></li>
+            <li><a href="#contact" title="Contact Sri Spardha Academy">Contact</a></li>
         </ul>
     </nav>
 
@@ -74,7 +108,7 @@
 </div>
 
 <!-- Image Slider -->
-<section class="slider">
+<section  class="slider">
     <div class="slides">
         <div class="slide active" style="background-image:url('images/img1.jpeg');">
             <div class="slide-text">
@@ -106,9 +140,7 @@
 
 <section class="features">
     <div class="feature-card">
-        <div class="feature-badge">
-            <span>01</span>
-        </div>
+        <div class="feature-badge"></div>
         <div class="feature-icon">
             <i class="fa-solid fa-book-open"></i>
         </div>
@@ -121,9 +153,7 @@
     </div>
 
     <div class="feature-card">
-        <div class="feature-badge">
-            <span>02</span>
-        </div>
+        <div class="feature-badge"></div>
         <div class="feature-icon">
             <i class="fa-solid fa-file-lines"></i>
         </div>
@@ -136,9 +166,7 @@
     </div>
 
     <div class="feature-card">
-        <div class="feature-badge">
-            <span>03</span>
-        </div>
+        <div class="feature-badge"></div>
         <div class="feature-icon">
             <i class="fa-solid fa-user-tie"></i>
         </div>
@@ -148,6 +176,117 @@
             who provide personal attention, mentorship, and proven
             exam strategies.
         </p>
+    </div>
+</section>
+
+<section id="result" class="results-section">
+  <div class="results-container">
+
+    <h2>Our Results & Achievements</h2>
+    <p class="results-subtitle">
+      Celebrating the success of our students in competitive exams
+    </p>
+
+    <!-- Stats Cards -->
+    <div class="results-stats">
+
+      <div class="stat-card">
+        <span class="icon">🏆</span>
+        <h3 class="count" data-target="500">30</h3>
+        <p>Selections</p>
+      </div>
+
+      <div class="stat-card">
+        <span class="icon">🎯</span>
+        <h3>Top Ranks</h3>
+        <p>Across Exams</p>
+      </div>
+
+      <div class="stat-card">
+        <span class="icon">📅</span>
+        <h3>2022 – 2025</h3>
+        <p>Annual Results</p>
+      </div>
+
+      <div class="stat-card">
+        <span class="icon">👨‍🎓</span>
+        <h3 class="count" data-target="1000">50</h3>
+        <p>Successful Students</p>
+      </div>
+
+    </div>
+
+<!-- Student Cards -->
+ <div class="students">
+    <div class="student-card">
+        <img src="images/student1.png" alt="KAS Qualified Student">
+        <h4>UMADEVI</h4>
+        <span>PSI 1st RANK</span>
+    </div>
+
+    <div class="student-card">
+        <img src="images/student2.png" alt="FDA Qualified Student">
+        <h4>MANJUNATH</h4>
+        <span>PSI</span>
+    </div>
+
+    <div class="student-card">
+        <img src="images/student3.png" alt="PSI Qualified Student">
+        <h4>SHANTHI</h4>
+        <span>KAS</span>
+    </div>
+
+</div>
+
+<a href="result.html" class="view-more">View More Results →</a>
+</div>
+</section>
+
+<!-- Courses Section -->
+<section id="course" class="courses-home">
+    <h2 class="section-title">Our Popular Courses</h2>
+    <p class="section-subtitle">
+        Comprehensive coaching programs designed for Government exam success
+    </p>
+
+    <div class="courses-grid">
+
+        <div class="course-card">
+            <h3>KAS</h3>
+            <p>Karnataka Administrative Service coaching with Prelims, Mains & Interview guidance.</p>
+            <a href="kas.html" class="course-btn">View Details</a>
+        </div>
+
+        <div class="course-card">
+            <h3>IPS</h3>
+            <p>Police Sub Inspector exam preparation with physical & written training.</p>
+            <a href="ips" class="course-btn">View Details</a>
+        </div>
+
+        <div class="course-card">
+            <h3>FDA / SDA</h3>
+            <p>Foundation coaching for FDA & SDA exams with complete syllabus coverage.</p>
+            <a href="/courses/fda-sda" class="course-btn">View Details</a>
+        </div>
+
+        <div class="course-card">
+            <h3>SSC</h3>
+            <p>SSC CGL, CHSL & other staff selection exams with regular mock tests.</p>
+            <a href="/courses/ssc" class="course-btn">View Details</a>
+        </div>
+
+        <div class="course-card">
+            <h3>Banking</h3>
+            <p>IBPS, SBI PO & Clerk coaching with aptitude & reasoning focus.</p>
+            <a href="/courses/banking" class="course-btn">View Details</a>
+        </div>
+
+        <div class="course-card">
+            <h3>Railway</h3>
+            <p>RRB NTPC & Group D preparation with updated exam pattern.</p>
+            <a href="/courses/railway" class="course-btn">View Details</a>
+        </div>
+
     </div>
 </section>
 
