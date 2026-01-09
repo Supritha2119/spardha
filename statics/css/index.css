@@ -499,7 +499,7 @@ ul,
   font-size: 17px;
 }
 
-/* Stats */
+
 .results-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -535,7 +535,7 @@ ul,
   font-weight: 500;
 }
 
-/* Students */
+
 .students {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -568,7 +568,7 @@ ul,
   color: #555;
 }
 
-/* View More */
+
 .view-more {
   display: inline-block;
   margin-top: 20px;
@@ -581,7 +581,7 @@ ul,
   text-decoration: underline;
 }
 
-/* Courses Section */
+
 .courses-home {
     padding: 80px 60px;
     background: linear-gradient(135deg, #f6faff, #eef5ff);
@@ -655,7 +655,7 @@ ul,
     transform: scale(1.05);
 }
 
-/* Responsive */
+
 @media (max-width: 1024px) {
     .courses-home {
         padding: 60px 30px;
@@ -675,9 +675,41 @@ ul,
     }
 }
 
+.whatsapp-chat {
+  position: fixed;
+  bottom: 90px;
+  right: 25px;
+  background: #25d366;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+}
 
+.whatsapp-chat i {
+  font-size: 20px;
+}
 
+.whatsapp-chat:hover {
+  background: #1ebe5d;
+}
 
+/* Mobile */
+@media (max-width: 600px) {
+  .whatsapp-chat span {
+    display: none;
+  }
+  .whatsapp-chat {
+    padding: 16px;
+    border-radius: 50%;
+  }
+}
 
 .footer-modern {
     background: linear-gradient(135deg, #0a2c5d, #0e6f64);

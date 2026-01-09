@@ -15,7 +15,7 @@
         const course = document.getElementById("course").value;
         const joining = document.getElementById("joining").value;
 
-        // Validation
+      
         if (name === "" || phone === "" || course === "" || joining === "") {
             alert("Please fill all fields");
             return;
@@ -93,7 +93,7 @@ function showSlide(index) {
         slide.style.display = "none"; 
         slide.classList.remove("active");
     });
-    slides[index].style.display = "flex"; // show current slide
+    slides[index].style.display = "flex"; 
     slides[index].classList.add("active");
 }
 
