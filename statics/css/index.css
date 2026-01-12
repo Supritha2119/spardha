@@ -700,7 +700,7 @@ ul,
   background: #1ebe5d;
 }
 
-/* Mobile */
+
 @media (max-width: 600px) {
   .whatsapp-chat span {
     display: none;
@@ -710,6 +710,108 @@ ul,
     border-radius: 50%;
   }
 }
+
+
+
+.google-reviews {
+    padding: 60px 8%;
+    background: #f8f9fb;
+}
+
+.google-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.google-line {
+    width: 80px;
+    height: 4px;
+    background:linear-gradient(135deg, #004aad, #0e6f64);
+    margin: 0 auto 40px;
+}
+
+.review-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.google-rating-box {
+    width: 230px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.google-rating-box h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.stars {
+    color: #f4b400;
+    font-size: 22px;
+}
+
+.stars.small {
+    font-size: 16px;
+}
+
+
+.review-slider {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.slider-viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.7s ease;
+}
+
+
+.google-card {
+    min-width: 340px;
+    max-width: 340px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-right: 25px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.google-card h4 {
+    margin: 0 0 5px;
+}
+
+.google-card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+.slider-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(135deg, #004aad, #0e6f64);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 5;
+}
+
+
 
 .footer-modern {
     background: linear-gradient(135deg, #0a2c5d, #0e6f64);

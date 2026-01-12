@@ -1,63 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Sri Spardha Academy</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="statics/css/contact.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Sri Spardha Academy</title>
+  <link rel="stylesheet" href="statics/css/contact.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
 <a href="index.html" class="back-home"><i class="fa fa-arrow-left"></i> Back to Home</a>
 <section class="contact-section">
+  <h2 class="page-title">Contact Sri Spardha Academy</h2>
 
-  <h2 class="section-title">Contact Sri Spardha Academy</h2>
-  <p class="section-subtitle">
-    Reach out to us or select your nearest branch
-  </p>
+  <div class="top-grid">
 
-  <!-- ===== ACADEMY MAIN DETAILS ===== -->
-  <div class="academy-details">
-    <h3>📌 Head Office</h3>
-    <p>
-      <i class="fa fa-location-dot"></i>
-      587, 3rd Floor, 100ft Road, Dwaraka Nagar,
-      Kanakapura Main Rd, Vajarahalli, Bengaluru – 560062
-    </p>
-    <p>
-      <i class="fa fa-phone"></i>
-      <a href="tel:+919901731785">+91 9901731785</a> /
-      <a href="tel:+919901731758">+91 9901731758</a>
-    </p>
-    <p>
-      <i class="fa fa-envelope"></i>
-      info@srispardhaacademy.in
-    </p>
-  </div>
-
-  <!-- ===== BRANCH SELECTOR ===== -->
-  <div class="branch-selector">
-    <label for="branchSelect">Select Branch</label>
-    <select id="branchSelect" onchange="changeBranch()">
-      <option value="vajarahalli">Vajarahalli</option>
-      <option value="koramangala">Koramangala</option>
-      <option value="hoskote">Hoskote</option>
-    </select>
-  </div>
-
-  <div class="contact-wrapper">
-
-    <!-- ===== WHATSAPP CONTACT FORM ===== -->
-    <div class="contact-form">
+    <!-- ===== FORM ===== -->
+    <div class="form-box">
       <h3>Enquiry Form</h3>
 
-      <form onsubmit="sendWhatsApp(); return false;">
-        <input type="text" id="name" placeholder="Full Name" required>
-        <input type="tel" id="phone" placeholder="10 Digit Phone Number" required>
+      <form id="enquiryForm" method="POST">
 
-        <select id="course" required>
+        <!-- Branch Selector -->
+        <div class="branch-selector">
+          <label><input type="radio" name="branch" value="Kormangalla" checked> Kormangalla</label>
+          <label><input type="radio" name="branch" value="Vajarahalli"> Vajarahalli</label>
+          <label><input type="radio" name="branch" value="Hoskote"> Hoskote</label>
+        </div>
+
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+
+        <select name="course" required>
           <option value="">Select Course</option>
           <option>KAS</option>
           <option>PSI</option>
@@ -65,41 +38,39 @@
           <option>Banking</option>
         </select>
 
-        <textarea id="message" rows="4" placeholder="Your Message"></textarea>
+        <textarea name="message" placeholder="Your Message"></textarea>
 
-        <button type="submit">
-          <i class="fab fa-whatsapp"></i> Send via WhatsApp
-        </button>
+        <div class="form-buttons">
+          <button type="button" id="whatsappBtn">Send via WhatsApp</button>
+          <button type="submit">Submit</button>
+        </div>
+
       </form>
-
-      <div id="successMsg" class="success-msg">
-        ✅ WhatsApp opened. Please tap Send.
-      </div>
     </div>
 
-    <!-- ===== BRANCH DETAILS + MAP ===== -->
-    <div class="branch-details">
+    <!-- ===== MAP ===== -->
+    <div class="map-box">
       <h3 id="branchName"></h3>
       <p id="branchAddress"></p>
       <p id="branchPhone"></p>
-
       <iframe id="branchMap" loading="lazy"></iframe>
     </div>
 
   </div>
 </section>
 
+<div class="head-office">
+  <h3>Head Office Division</h3>
+  <p><strong>Sri Spardha Academy</strong></p>
+  <p>📍 Koramangala, Bengaluru – 560034</p>
+  <p>📞 +91 000000000</p>
+  <p>✉️ info@srispardhaacademy.com</p>
+</div>
+
 <a href="#" id="whatsappChat" class="whatsapp-chat">
   <i class="fab fa-whatsapp"></i>
   <span>Live Chat</span>
 </a>
-
-<!-- FLOATING CALL BUTTON -->
-<a id="floatingCallBtn" href="tel:+91XXXXXXXXXX" class="floating-call">
-  <i class="fa fa-phone"></i>
-  <span>Call Now</span>
-</a>
-
 <!-- Footer Section -->
 <footer class="footer-modern">
     <div class="footer-wave"></div>
@@ -127,10 +98,10 @@
             <h4>Quick Links</h4>
             <ul>
                 <li><a href="index.html" title="Sri Spardha Academy Home">Home</a></li>
-                <li><a href="" title="Courses Offered by Sri Spardha Academy">Courses</a></li>
-                <li><a href="" title="About Sri Spardha Academy">About</a></li>
+                <li><a href="#courses" title="Courses Offered by Sri Spardha Academy">Courses</a></li>
+                <li><a href="about.html" title="About Sri Spardha Academy">About</a></li>
                 <li><a href="result.html" title="Our Successful Students">Achievements</a></li>
-                <li><a href="/" title="Review of Sri Spardha Academy">Reviews</a></li>
+                <li><a href="#reviews" title="Review of Sri Spardha Academy">Reviews</a></li>
                 <li><a href="contact.html" title="Contact Sri Spardha Academy">Contact</a></li>
             </ul>
         </div>
@@ -158,7 +129,7 @@
             <div class="footer-map">
                 <h4>Our Location</h4>
                 <iframe
-                    src="https://www.google.com/maps?q=Vajarahalli,Bengaluru&output=embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.5071742045766!2d77.5368341!3d12.875076000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fdf3cf7cb43%3A0x67c605e70d157907!2sSri%20Spardha%20Academy%20Vajarahalli!5e0!3m2!1sen!2sin!4v1768219842078!5m2!1sen!2sin"
                     width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
@@ -170,6 +141,7 @@
         © 2026 Sri Spardha Academy. All Rights Reserved.
     </div>
 </footer>
+
 <script src="statics/script/contact.js"></script>
 </body>
 </html>

@@ -140,5 +140,56 @@ counters.forEach(counter => {
   updateCount();
 });
 
+const track = document.getElementById("sliderTrack");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+let cards = Array.from(track.children);
+let cardWidth = cards[0].offsetWidth + 25;
+
+/* Clone first & last */
+const firstClone = cards[0].cloneNode(true);
+const lastClone = cards[cards.length - 1].cloneNode(true);
+
+track.appendChild(firstClone);
+track.insertBefore(lastClone, cards[0]);
+
+cards = Array.from(track.children);
+
+let index = 1;
+track.style.transform = `translateX(-${cardWidth * index}px)`;
+
+nextBtn.addEventListener("click", () => {
+    index++;
+    track.style.transition = "transform 0.7s ease";
+    track.style.transform = `translateX(-${cardWidth * index}px)`;
+});
+
+
+prevBtn.addEventListener("click", () => {
+    index--;
+    track.style.transition = "transform 0.7s ease";
+    track.style.transform = `translateX(-${cardWidth * index}px)`;
+});
+
+
+track.addEventListener("transitionend", () => {
+    if (cards[index] === firstClone) {
+        track.style.transition = "none";
+        index = 1;
+        track.style.transform = `translateX(-${cardWidth * index}px)`;
+    }
+
+    if (cards[index] === lastClone) {
+        track.style.transition = "none";
+        index = cards.length - 2;
+        track.style.transform = `translateX(-${cardWidth * index}px)`;
+    }
+});
+
+
+setInterval(() => {
+    nextBtn.click();
+}, 6000);
 
 
