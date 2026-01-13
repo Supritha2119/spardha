@@ -812,7 +812,6 @@ ul,
 }
 
 
-
 .footer-modern {
     background: linear-gradient(135deg, #0a2c5d, #0e6f64);
     color: #ffffff;
@@ -999,4 +998,169 @@ ul,
     .actions {
         margin-top: 10px;
     }
+}
+
+/* =====================================
+   MOBILE RESPONSIVE CSS ONLY
+===================================== */
+@media (max-width: 768px) {
+
+  /* ---- GLOBAL ---- */
+  body {
+    overflow-x: hidden;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* ---- HEADER & NAV ---- */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .logo-area span {
+    font-size: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  /* Dropdowns */
+  #coursesMenu,
+  #branchesMenu {
+    position: static;
+    width: 100%;
+  }
+
+  .sub-courses {
+    padding-left: 15px;
+  }
+
+  /* ---- POPUP FORM ---- */
+  .popup-form {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .popup-form input,
+  .popup-form select,
+  .popup-form button {
+    font-size: 14px;
+  }
+
+  /* ---- ANNOUNCEMENT ---- */
+  .announcement {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  /* ---- SLIDER ---- */
+  .slider {
+    height: 350px;
+  }
+
+  .slide {
+    padding: 0 15px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .slide-text {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .slide-text h1 {
+    font-size: 20px;
+  }
+
+  .slide-text p {
+    font-size: 14px;
+  }
+
+  .slider-nav span {
+    font-size: 28px;
+  }
+
+  /* ---- FEATURES ---- */
+  .features {
+    grid-template-columns: 1fr;
+    padding: 40px 15px;
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 30px 20px;
+  }
+
+  /* ---- RESULTS ---- */
+  .results-section {
+    padding: 40px 15px;
+  }
+
+  .results-stats,
+  .students {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* ---- COURSES ---- */
+  .courses-home {
+    padding: 40px 15px;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* ---- REVIEW SLIDER ---- */
+  #sliderTrack {
+    transition: transform 0.6s ease;
+  }
+
+  .review-container {
+    overflow: hidden;
+  }
+
+  .google-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  /* ---- FOOTER ---- */
+  .footer-wrap {
+    grid-template-columns: 1fr;
+    padding: 40px 15px;
+    gap: 25px;
+  }
+
+  .footer-map iframe {
+    width: 100%;
+    height: 200px;
+  }
 }
