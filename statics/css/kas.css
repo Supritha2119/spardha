@@ -6,17 +6,16 @@
 }
 
 .kas-hero {
-    background: url(/images/kas1.jpeg) center/cover no-repeat;
+    background-image: url(/images/kas1.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     min-height: 100vh;
-    color: #fff;
-    margin-top: 0;
-    padding-top: 0;
-    min-height: 100vh;
-   
+    position: relative;
 }
-
 .kas-overlay {
     background: rgba(0,0,0,0.55);
+    color: #fff;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -404,7 +403,7 @@
         background-position: center top;
         min-height: 70vh;
         background-size: cover;
-        background-image: url('/images/kas1-mobile.jpeg'); 
+        background-image: url(/images/kas1.jpeg); 
     }
 
     .kas-overlay {
@@ -718,9 +717,3 @@
   }
 }
 
-/* =====  Mobile-specific hero image ===== */
-@media (max-width: 768px) {
-    .kas-hero {
-        background-image: url('/images/kas1.jpeg'); 
-    }
-}
