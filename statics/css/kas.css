@@ -5,7 +5,6 @@
     font-family: "Segoe UI", sans-serif;
 }
 
-
 .kas-hero {
     background: url(/images/kas1.jpeg) center/cover no-repeat;
     min-height: 100vh;
@@ -52,7 +51,6 @@
     margin-right: 6px;
 }
 
-
 .enroll-btn {
     display: inline-block;
     margin: 25px 0 40px;
@@ -68,7 +66,6 @@
 .enroll-btn i {
     margin-right: 8px;
 }
-
 
 .kas-cards {
     display: grid;
@@ -165,34 +162,6 @@
     border-radius: 6px;
 }
 
-
-@media (max-width: 768px) {
-    .course-hero {
-        padding: 40px 15px;
-        background-position: center;
-    }
-
-    .course-hero h1 {
-        font-size: 2rem;
-    }
-
-    .course-hero p {
-        font-size: 1rem;
-    }
-
-    .collapsible {
-        font-size: 1rem;
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .course-meta {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
 .back-home {
     display: inline-block;
     margin: 20px;
@@ -242,18 +211,6 @@
 .whatsapp-chat:hover {
   background: #1ebe5d;
 }
-
-
-@media (max-width: 600px) {
-  .whatsapp-chat span {
-    display: none;
-  }
-  .whatsapp-chat {
-    padding: 16px;
-    border-radius: 50%;
-  }
-}
-
 
 .footer-modern {
     background: linear-gradient(135deg, #0a2c5d, #0e6f64);
@@ -325,6 +282,7 @@
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
+
 .footer-links a:hover {
     color: #2ecc71;
     transform: translateX(6px);
@@ -351,6 +309,17 @@
 .footer-links .sub-courses a:hover {
     color: #2ecc71;
     transform: translateX(6px);
+}
+.footer-links ul,
+.footer-links .sub-courses {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    padding: 0;
+    margin: 0;
 }
 
 .footer-contact h4 {
@@ -427,19 +396,331 @@
     color: #e0e7f5;
 }
 
-
+/* ================= MOBILE-ONLY CSS ================= */
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 15px 20px;
+
+    .kas-hero {
+        padding: 30px 15px;
+        background-position: center top;
+        min-height: 70vh;
+        background-size: cover;
+        background-image: url('/images/kas1-mobile.jpeg'); 
     }
-    .nav {
-        flex-direction: column;
-        gap: 15px;
+
+    .kas-overlay {
+        min-height: 70vh;
+        padding: 20px 10px;
     }
-    .actions {
-        margin-top: 10px;
+
+    .kas-container h1 {
+        font-size: 28px;
+    }
+
+    .kas-subtitle {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+
+    .kas-meta {
+        font-size: 13px;
+    }
+
+    .enroll-btn {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+
+    .kas-cards {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .kas-card ul li {
+        font-size: 13px;
+    }
+
+    .collapsible {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .collapsible i {
+        font-size: 14px;
+    }
+
+    .content ul li {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+
+    .content img,
+    .section-img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        display: block;
+        margin: 15px 0;
+        border-radius: 6px;
+    }
+
+    .back-home {
+        padding: 8px 12px;
+        font-size: 14px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .whatsapp-chat {
+        bottom: 80px;
+        right: 20px;
+        padding: 14px 18px;
+    }
+
+    .footer-wrap {
+        padding: 40px 15px;
+        gap: 25px;
+    }
+
+    .footer-brand h2 {
+        font-size: 22px;
+    }
+
+    .footer-links h4, .footer-contact h4 {
+        font-size: 15px;
+    }
+
+    .footer-links a, .footer-contact p {
+        font-size: 13px;
+    }
+
+    .footer-cta {
+        padding: 10px 26px;
+        font-size: 14px;
     }
 }
 
+@media (max-width: 480px) {
+
+    .kas-hero {
+        min-height: 60vh;
+        background-position: center top;
+        padding: 20px 10px;
+        background-size: cover;
+    }
+
+    .kas-container h1 {
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
+    .kas-subtitle {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .kas-meta {
+        font-size: 12px;
+    }
+
+    .enroll-btn {
+        font-size: 13px;
+        padding: 10px 18px;
+    }
+
+    .kas-cards {
+        gap: 15px;
+    }
+
+    .kas-card ul li {
+        font-size: 12px;
+    }
+
+    .collapsible {
+        font-size: 0.95rem;
+        padding: 12px 15px;
+    }
+
+    .collapsible i {
+        font-size: 12px;
+    }
+
+    .content ul li {
+        font-size: 13px;
+    }
+
+    .content img,
+    .section-img {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+        border-radius: 4px;
+    }
+
+    .back-home {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .whatsapp-chat {
+        bottom: 70px;
+        right: 15px;
+        padding: 12px;
+        border-radius: 50%;
+    }
+
+    .whatsapp-chat span {
+        display: none; 
+    }
+
+    .footer-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px 15px;
+    align-items: stretch;
+  }
+
+  .footer-brand h2 {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .footer-brand p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  
+  .footer-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+
+  .footer-badges span {
+    display: block;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+  }
+  
+  .footer-cta {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 12px 0;
+    font-size: 14px;
+    border-radius: 25px;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+
+  .footer-social a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 0;
+  }
+
+   .footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .footer-links,
+  .footer-links-container .footer-courses { 
+    width: 48%; 
+    margin-bottom: 0;
+  }
+
+  .footer-links h4,
+  .footer-links-container .footer-courses h4 {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .footer-links h3,
+  .footer-links-container .footer-courses h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .footer-links a,
+  .footer-links .sub-courses a,
+  .footer-links-container .footer-courses a {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .footer-links .sub-courses a,
+  .footer-links-container .footer-courses .sub-courses a {
+    margin-left: 10px;
+  }
+
+  .footer-links ul,
+.footer-links .sub-courses {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    padding: 0;
+    margin: 0;
+}
+  .footer-contact {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .footer-contact h4 {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  .footer-contact p {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .footer-map iframe {
+    height: 180px;
+    margin-bottom: 15px;
+  }
+
+  
+  .footer-copy {
+    font-size: 12px;
+    padding: 12px;
+    text-align: center;
+  }
+
+  .footer-wave {
+    height: 40px;
+  }
+}
+
+/* =====  Mobile-specific hero image ===== */
+@media (max-width: 768px) {
+    .kas-hero {
+        background-image: url('/images/kas1.jpeg'); 
+    }
+}

@@ -1,195 +1,206 @@
 
-    setTimeout(() => {
-        document.getElementById("popupOverlay").style.display = "flex";
-    }, 7000);
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.nav');
 
-    function closePopup() {
-        document.getElementById("popupOverlay").style.display = "none";
-    }
-
-    document.getElementById("enquiryForm").addEventListener("submit", function(e) {
-        e.preventDefault();
-
-        const name = document.getElementById("name").value.trim();
-        const phone = document.getElementById("phone").value.trim();
-        const course = document.getElementById("course").value;
-        const joining = document.getElementById("joining").value;
-
-      
-        if (name === "" || phone === "" || course === "" || joining === "") {
-            alert("Please fill all fields");
-            return;
-        }
-
-        if (!/^[0-9]{10}$/.test(phone)) {
-            alert("Enter valid 10-digit phone number");
-            return;
-        }
-
-       
-        const message = `Hello,
-Name: ${name}
-Phone: ${phone}
-Course Interested: ${course}
-Willing to Join: ${joining}`;
-
-      
-        const whatsappNumber = "91XXXXXXXXXX";
-
-        window.open(
-            `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
-            "_blank"
-        );
-
-        closePopup();
-    });
-
-
-
-function toggleCourses() {
-    const coursesMenu = document.getElementById("coursesMenu");
-    const branchesMenu = document.getElementById("branchesMenu");
-    coursesMenu.classList.toggle("active");
-    branchesMenu.classList.remove("active"); 
-}
-
-
-function toggleBranches() {
-    const coursesMenu = document.getElementById("coursesMenu");
-    const branchesMenu = document.getElementById("branchesMenu");
-    branchesMenu.classList.toggle("active");
-    coursesMenu.classList.remove("active"); 
-}
-
-
-function toggleSub(element) {
-    const sub = element.nextElementSibling; 
-
-    
-    document.querySelectorAll(".sub-courses").forEach(item => {
-        if (item !== sub) item.classList.remove("active");
-    });
-
-    sub.classList.toggle("active"); 
-}
-
-
-document.addEventListener("click", function () {
-    document.getElementById("coursesMenu").classList.remove("active");
-    document.getElementById("branchesMenu").classList.remove("active");
-    document.querySelectorAll(".sub-courses").forEach(item => item.classList.remove("active"));
+hamburger.addEventListener('click', () => {
+  nav.classList.toggle('active');
 });
 
 
-const slides = document.querySelectorAll(".slider .slide");
-const prev = document.querySelector(".slider-nav .prev");
-const next = document.querySelector(".slider-nav .next");
+document.querySelectorAll('.nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    if(nav.classList.contains('active')) nav.classList.remove('active');
+  });
+});
 
-let currentIndex = 0;
 
+document.querySelectorAll('.dropbtn').forEach(button => {
+  button.addEventListener('click', (e) => {
+    const dropdown = e.currentTarget.nextElementSibling;
+
+    
+    document.querySelectorAll('.dropdown-content').forEach(d => {
+      if(d !== dropdown) d.classList.remove('active');
+    });
+
+    
+    dropdown.classList.toggle('active');
+  });
+});
+
+document.querySelectorAll('.course-title').forEach(title => {
+  title.addEventListener('click', (e) => {
+    const subCourses = title.nextElementSibling;
+
+   
+    document.querySelectorAll('.sub-courses').forEach(sc => {
+      if(sc !== subCourses) sc.classList.remove('active');
+    });
+
+    
+    subCourses.classList.toggle('active');
+  });
+});
+
+
+document.addEventListener('click', (e) => {
+  if(!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown-content').forEach(d => d.classList.remove('active'));
+  }
+  if(!e.target.closest('.course-title')) {
+    document.querySelectorAll('.sub-courses').forEach(sc => sc.classList.remove('active'));
+  }
+});
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slider .slide');
+const nextSlide = document.querySelector('.slider-nav .next');
+const prevSlide = document.querySelector('.slider-nav .prev');
 
 function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.display = "none"; 
-        slide.classList.remove("active");
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if(i === index) slide.classList.add('active');
+  });
+}
+
+function next() {
+  slideIndex = (slideIndex + 1) % slides.length;
+  showSlide(slideIndex);
+}
+
+function prev() {
+  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+  showSlide(slideIndex);
+}
+
+showSlide(slideIndex);
+
+if(nextSlide) nextSlide.addEventListener('click', next);
+if(prevSlide) prevSlide.addEventListener('click', prev);
+
+
+setInterval(next, 5000);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.getElementById("sliderTrack");
+    const cards = document.querySelectorAll(".google-card");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+
+    let currentIndex = 0;
+    let autoSlide;
+
+    function getCardWidth() {
+        return cards[0].offsetWidth + 20; 
+    }
+
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * getCardWidth()}px)`;
+    }
+
+    function nextSlide() {
+        if (currentIndex < cards.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0; 
+        }
+        updateSlider();
+    }
+
+    function prevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = cards.length - 1;
+        }
+        updateSlider();
+    }
+
+    nextBtn.addEventListener("click", () => {
+        nextSlide();
+        resetAutoSlide();
     });
-    slides[index].style.display = "flex"; 
-    slides[index].classList.add("active");
+
+    prevBtn.addEventListener("click", () => {
+        prevSlide();
+        resetAutoSlide();
+    });
+
+    
+    function startAutoSlide() {
+        autoSlide = setInterval(nextSlide, 5000);
+    }
+
+    function resetAutoSlide() {
+        clearInterval(autoSlide);
+        startAutoSlide();
+    }
+
+    startAutoSlide();
+
+    
+    let startX = 0;
+    let endX = 0;
+
+    track.addEventListener("touchstart", e => {
+        startX = e.touches[0].clientX;
+    });
+
+    track.addEventListener("touchend", e => {
+        endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) nextSlide();
+        if (endX - startX > 50) prevSlide();
+        resetAutoSlide();
+    });
+
+    window.addEventListener("resize", updateSlider);
+});
+
+const popupOverlay = document.querySelector('.popup-overlay');
+const closeBtn = document.querySelector('.popup-overlay .close-btn');
+
+
+if(!sessionStorage.getItem('popupShown')) {
+  setTimeout(() => {
+    if(popupOverlay) popupOverlay.style.display = 'flex';
+    sessionStorage.setItem('popupShown', 'true');
+  }, 7000);
 }
 
 
-showSlide(currentIndex);
+if(closeBtn) closeBtn.addEventListener('click', () => {
+  popupOverlay.style.display = 'none';
+});
 
 
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    showSlide(currentIndex);
-}
+if(popupOverlay) popupOverlay.addEventListener('click', (e) => {
+  if(e.target === popupOverlay) popupOverlay.style.display = 'none';
+});
 
 
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    showSlide(currentIndex);
-}
-
-
-setInterval(nextSlide, 5000);
-
-
-next.addEventListener("click", nextSlide);
-prev.addEventListener("click", prevSlide);
-
-
-const counters = document.querySelectorAll('.count');
-
+const counters = document.querySelectorAll('.stat-card h3');
 counters.forEach(counter => {
   const updateCount = () => {
     const target = +counter.getAttribute('data-target');
     const count = +counter.innerText;
-    const speed = 80;
-
-    const increment = target / speed;
-
-    if (count < target) {
+    const increment = target / 200; 
+    if(count < target) {
       counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCount, 30);
+      setTimeout(updateCount, 20);
     } else {
-      counter.innerText = target + '+';
+      counter.innerText = target;
     }
   };
   updateCount();
 });
-
-const track = document.getElementById("sliderTrack");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-
-let cards = Array.from(track.children);
-let cardWidth = cards[0].offsetWidth + 25;
-
-/* Clone first & last */
-const firstClone = cards[0].cloneNode(true);
-const lastClone = cards[cards.length - 1].cloneNode(true);
-
-track.appendChild(firstClone);
-track.insertBefore(lastClone, cards[0]);
-
-cards = Array.from(track.children);
-
-let index = 1;
-track.style.transform = `translateX(-${cardWidth * index}px)`;
-
-nextBtn.addEventListener("click", () => {
-    index++;
-    track.style.transition = "transform 0.7s ease";
-    track.style.transform = `translateX(-${cardWidth * index}px)`;
-});
-
-
-prevBtn.addEventListener("click", () => {
-    index--;
-    track.style.transition = "transform 0.7s ease";
-    track.style.transform = `translateX(-${cardWidth * index}px)`;
-});
-
-
-track.addEventListener("transitionend", () => {
-    if (cards[index] === firstClone) {
-        track.style.transition = "none";
-        index = 1;
-        track.style.transform = `translateX(-${cardWidth * index}px)`;
-    }
-
-    if (cards[index] === lastClone) {
-        track.style.transition = "none";
-        index = cards.length - 2;
-        track.style.transform = `translateX(-${cardWidth * index}px)`;
-    }
-});
-
-
-setInterval(() => {
-    nextBtn.click();
-}, 6000);
-
-

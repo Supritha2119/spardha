@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<!-- Popup Overlay -->
+
 <div id="popupOverlay" class="popup-overlay">
     <div class="popup-form">
         <span class="close-btn" onclick="closePopup()">×</span>
@@ -44,18 +44,19 @@
 </div>
 
 
-<!-- Header & Navigation -->
+
 <header id="index" class="header">
     <div class="logo-area">
         <img src="images/logo.jpeg" alt="Sparda Academy Logo" width="120" height="auto">
         <span>Sri Spardha Academy</span>
     </div>
 
+
     <nav class="nav">
         <ul class="nav-list">
             <li><a href="#index" title="Sri Spardha Academy Home">Home</a></li>
             
-            <!-- Courses Dropdown -->
+           
             <li class="dropdown" onclick="event.stopPropagation()">
                 <span class="dropbtn" onclick="toggleCourses()" title="Courses Offered by Sri Spardha Academy">
                     <a href="#courses">Courses</a> <i class="fa fa-chevron-down"></i>
@@ -89,6 +90,7 @@
             <li><a href="#reviews" title="Review of Sri Spardha Academy">Reviews</a></li>
             <li><a href="contact.html" title="Contact Sri Spardha Academy">Contact</a></li>
         </ul>
+        
     </nav>
 
     <div class="actions">
@@ -98,16 +100,20 @@
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
+    <div class="hamburger" onclick="toggleMenu()">
+  <i class="fas fa-bars"></i>
+</div>
+
 </header>
 
-<!-- Announcement Section -->
+
 <div class="announcement">
     <div class="scrolling-text">
         📢 Admissions Open for Govt Exams, IT courses & Career-Oriented | Limited Seats Available | Enroll Now at Sri Spardha Academy
     </div>
 </div>
 
-<!-- Image Slider -->
+
 <section  class="slider">
     <div class="slides">
         <div class="slide active" style="background-image:url('images/img1.jpeg');">
@@ -187,7 +193,7 @@
       Celebrating the success of our students in competitive exams
     </p>
 
-    <!-- Stats Cards -->
+    
     <div class="results-stats">
 
       <div class="stat-card">
@@ -216,7 +222,7 @@
 
     </div>
 
-<!-- Student Cards -->
+
  <div class="students">
     <div class="student-card">
         <img src="images/student1.png" alt="KAS Qualified Student">
@@ -242,7 +248,7 @@
 </div>
 </section>
 
-<!-- Courses Section -->
+
 <section id="courses" class="courses-home">
     <h2 class="section-title">Our Popular Courses</h2>
     <p class="section-subtitle">
@@ -302,14 +308,14 @@
 
     <div class="review-container">
 
-        <!-- Left rating box -->
+       
         <div class="google-rating-box">
             <h1>5.0</h1>
             <div class="stars">★★★★★</div>
             <p>Based on student reviews</p>
         </div>
 
-        <!-- Slider -->
+        
         <div class="review-slider">
             <button class="slider-btn left" id="prevBtn">&#10094;</button>
 
@@ -372,11 +378,10 @@
     </div>
 </section>
 
-<!-- Footer Section -->
 <footer class="footer-modern">
     <div class="footer-wave"></div>
     <div class="footer-wrap">
-        <!-- Brand & Info -->
+        
         <div class="footer-brand">
             <h2>Sri Spardha Academy</h2>
             <p>Shaping successful careers through expert coaching in Government exams.</p>
@@ -394,7 +399,7 @@
             </div>
         </div>
 
-        <!-- Quick Links -->
+     
         <div class="footer-links">
             <h4>Quick Links</h4>
             <ul>
@@ -407,7 +412,7 @@
             </ul>
         </div>
 
-        <!-- Courses Section -->
+      
         <div class="footer-links">
             <h4>Our Courses</h4>
             <h3>Government Exams</h3>
@@ -420,7 +425,7 @@
             </ul>
         </div>
 
-        <!-- Contact Section -->
+        
         <div class="footer-contact">
             <h4>Get in Touch</h4>
             <p><i class="fa fa-location-dot"></i> 587, 3rd Floor, 100ft road, Balaji Layout, Dwaraka Nagar, Vajarahalli, Kanakapura Main Rd, Talaghattapura, Bengaluru, Karnataka 560062</p>
@@ -444,5 +449,6 @@
 </footer>
 
 <script src="statics/script/index.js"></script>
+
 </body>
 </html>
