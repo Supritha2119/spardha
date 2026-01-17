@@ -1,71 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Sri Spardha Academy</title>
-  <link rel="stylesheet" href="statics/css/contact.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <title>Blog | Sri Spardha Academy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="statics/css/blog.css">
 </head>
 <body>
-<a href="index.html" class="back-home"><i class="fa fa-arrow-left"></i> Back to Home</a>
-<section class="contact-section">
-  <h2 class="page-title">Contact Sri Spardha Academy</h2>
+    <a href="index.html" class="back-home"><i class="fa fa-arrow-left"></i> Back to Home</a>
 
-  <div class="top-grid">
-
-   
-    <div class="form-box">
-      <h3>Enquiry Form</h3>
-
-      <form id="enquiryForm" method="POST" action="submit.php">
-
-        
-        <div class="branch-selector">
-          <label><input type="radio" name="branch" value="Kormangalla" checked> Kormangalla</label>
-          <label><input type="radio" name="branch" value="Vajarahalli"> Vajarahalli</label>
-          <label><input type="radio" name="branch" value="Hoskote"> Hoskote</label>
-        </div>
-
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-
-        <select name="course" required>
-          <option value="">Select Course</option>
-          <option>KAS</option>
-          <option>PSI</option>
-          <option>FDA / SDA</option>
-          <option>Banking</option>
-        </select>
-
-        <textarea name="message" placeholder="Your Message"></textarea>
-
-        <div class="form-buttons">
-          <button type="button" id="whatsappBtn">Send via WhatsApp</button>
-          <button type="submit">Submit</button>
-        </div>
-
-      </form>
-    </div>
-
-   
-    <div class="map-box">
-      <h3 id="branchName"></h3>
-      <p id="branchAddress"></p>
-      <p id="branchPhone"></p>
-      <iframe id="branchMap" loading="lazy"></iframe>
-    </div>
-
-  </div>
+<!-- Blog Header -->
+<section class="blog-hero">
+    <h1>Academy Blog</h1>
+    <p>Latest updates, exam tips & video guidance</p>
 </section>
 
-<div class="head-office">
-  <h3>Head Office Division</h3>
-  <p><strong>Sri Spardha Academy</strong></p>
-  <p>📍 Koramangala, Bengaluru – 560034</p>
-  <p>📞 +91 000000000</p>
-  <p>✉️ info@srispardhaacademy.com</p>
-</div>
+<!-- Blog Container -->
+<section class="blog-container">
+
+    <!-- BLOG POSTS -->
+    <div class="blog-posts">
+
+        <!-- VIDEO BLOG -->
+        <div class="blog-card video-card">
+            <video controls poster="images/video-thumb.jpg">
+                <source src="videos/strategy-session.mp4" type="video/mp4">
+            </video>
+
+            <div class="blog-content">
+                <div class="blog-meta">Jan 2026 · Video Lecture</div>
+                <h2>How to Crack Government Exams</h2>
+                <p>Expert strategy session explaining preparation methods.</p>
+
+
+                <!-- Expandable content -->
+                <div class="extra-content">
+                    <ul>
+                        <li>Daily study plan</li>
+                        <li>Time management tips</li>
+                        <li>Mock test strategy</li>
+                        <li>Revision techniques</li>
+                    </ul>
+                </div>
+
+                <span class="toggle-btn" onclick="toggleContent(this)">
+                    Read Details
+                </span>
+
+                <br><br>
+
+                <!-- Full article page -->
+                <a href="blog-detail.html" class="toggle-btn">
+                    View Full Article
+                </a>
+            </div>
+        </div>
+
+        <!-- CONTENT BLOG -->
+        <div class="blog-card">
+            <img src="images/blog1.jpg" alt="Study Tips">
+
+            <div class="blog-content">
+                <div class="blog-meta">Jan 2026 · Study Tips</div>
+                <h2>Daily Study Routine for Aspirants</h2>
+                <p>A simple routine to cover syllabus effectively.</p>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="images/blog3.jpg" alt="Success Story">
+            <div class="blog-content">
+                <div class="blog-meta">Jan 2026 · Success Story</div>
+                <h2>Student Success Story: From Aspirant to Officer</h2>
+                <p>Read how our student cracked the government exam with disciplined preparation and expert mentorship.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
 
 <a href="#" id="whatsappChat" class="whatsapp-chat">
   <i class="fab fa-whatsapp"></i>
@@ -103,7 +117,6 @@
                 <li><a href="result.html" title="Our Successful Students">Achievements</a></li>
                 <li><a href="index.html#reviews" title="Review of Sri Spardha Academy">Reviews</a></li>
                 <li><a href="contact.html" title="Contact Sri Spardha Academy">Contact</a></li>
-                <li><a href="blog.html" title="Academy Blog">Blogs</a></li>
             </ul>
         </div>
 
@@ -143,6 +156,18 @@
     </div>
 </footer>
 
-<script src="statics/script/contact.js"></script>
+<script>
+function toggleContent(btn) {
+    const content = btn.previousElementSibling;
+    if (content.style.display === "block") {
+        content.style.display = "none";
+        btn.innerText = "Read Details";
+    } else {
+        content.style.display = "block";
+        btn.innerText = "Hide Details";
+    }
+}
+</script>
+
 </body>
 </html>
