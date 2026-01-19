@@ -1146,14 +1146,17 @@ ul,
     .feature-badge {
         width: 40px;
         height: 4px;
+        
     }
      
     .results-section {
         padding: 50px 15px;
+         margin-top:-30px;
     }
 
     .results-section h2 {
-        font-size: 26px; 
+        font-size: 26px;
+         
     }
 
     .results-subtitle {
@@ -1214,10 +1217,12 @@ ul,
     .view-more {
         font-size: 14px;
         margin-top: 15px;
+        margin-bottom: 50px;
     }
 
     .courses-home {
     padding: 50px 15px;
+  
   }
 
   .courses-home .section-title {
@@ -1260,6 +1265,7 @@ ul,
 
     .google-reviews {
         padding: 40px 15px;
+         margin-top: -10px;
     }
 
   .google-title {
