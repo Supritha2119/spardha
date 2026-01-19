@@ -102,8 +102,9 @@ ul,
 }
 
 .logo-area span {
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 800;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #004aad;
 }
 
@@ -385,6 +386,7 @@ ul,
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
+    margin-top: -50px;
     padding: 80px 60px;
     background: linear-gradient(135deg, #e6f0ff, #f6fffb);
 }
@@ -441,6 +443,7 @@ ul,
   background: linear-gradient(135deg, #eef5ff, #f9fcff);
   padding: 70px 20px;
   text-align: center;
+  margin-top: -50px;
 }
 
 .results-container {
@@ -450,8 +453,10 @@ ul,
 
 .results-section h2 {
   font-size: 36px;
-  color: #0b4fa3;
+  color: #004aad;
   margin-bottom: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 800;
 }
 
 .results-subtitle {
@@ -486,7 +491,7 @@ ul,
 }
 
 .stat-card h3 {
-  font-size: 32px;
+  font-size: 36px;
   color: #0b4fa3;
 }
 
@@ -543,12 +548,14 @@ ul,
     padding: 80px 60px;
     background: linear-gradient(135deg, #f6faff, #eef5ff);
     text-align: center;
+    margin-top: -90px;
 }
 
 .courses-home .section-title {
     font-size: 36px;
-    color: #0a2c5d;
+    color: #004aad;
     font-weight: 800;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 12px;
 }
 
@@ -580,6 +587,8 @@ ul,
     transform: translateY(-10px);
     box-shadow: 0 35px 80px rgba(10, 44, 93, 0.2);
 }
+
+
 
 .course-card h3 {
     font-size: 22px;
@@ -640,12 +649,16 @@ ul,
 .google-reviews {
     padding: 60px 8%;
     background: #f8f9fb;
+    margin-top: -50px;
 }
 
 .google-title {
     text-align: center;
-    font-size: 32px;
+    font-size: 36px;
+    font-weight: 800;
     margin-bottom: 10px;
+    color: #004aad;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .google-line {
