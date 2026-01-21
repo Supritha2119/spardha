@@ -1018,15 +1018,33 @@ ul,
 
   .nav-list li:last-child {
     border-bottom: none;
-    color: blue;
-    font-size: 14px;
   }
 
   .nav a,
   .dropbtn {
-    display: inline-flex;
+    display: flex;
     font-size: 15px;
+    align-items: center;
+    justify-content:flex-start;
     gap: 6px;
+    width: 100%;
+  }
+  .dropbtn a {
+    padding: 0;
+    margin: 0;
+    width: auto;
+  }
+  .course-title{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+  }
+  .dropbtn i 
+  .course-title i {
+    font-size: 14px;
+    margin-left: 4px;
   }
 
   .dropdown-content {
@@ -1034,43 +1052,8 @@ ul,
     width: 100%;
     box-shadow: none;
     border-radius: 0;
-    display: none;
-    flex-direction: column;
   }
 
-  .dropdown-content.active {
-    display: block;
-}
- .dropdown .dropbtn {
-    display: flex;                 /* overrides block */
-    align-items: center;
-    justify-content: space-between;
-}
-
-.dropdown .dropbtn a {
-    display: inline-block;
-    padding: 0;
-    flex: 1;
-}
-
-.dropdown .dropbtn i {
-    display: inline-block;
-    font-size: 14px;
-}
-.sub-courses {
-    display: none;
-    padding-left: 15px;
-    
-}
-.sub-courses li a{
-   font-size: 14px;
-}
-
-.sub-courses.active {
-    display: block;
-}
-
-  
   .hamburger {
     display: block;
     position: absolute;
