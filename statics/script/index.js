@@ -8,25 +8,34 @@ hamburger.addEventListener('click', () => {
 
 
 document.querySelectorAll('.nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    if(nav.classList.contains('active')) nav.classList.remove('active');
+  link.addEventListener('click', (e) => {
+
+    // ❗ Do NOT close menu if inside dropdown button
+    if (e.target.closest('.dropbtn')) return;
+
+    if(nav.classList.contains('active')) {
+      nav.classList.remove('active');
+    }
   });
 });
 
-
 document.querySelectorAll('.dropbtn').forEach(button => {
   button.addEventListener('click', (e) => {
-    const dropdown = e.currentTarget.nextElementSibling;
+    e.preventDefault();      // ⭐ VERY IMPORTANT
+    e.stopPropagation();    // ⭐ VERY IMPORTANT
 
-    
+    const dropdown = button.nextElementSibling;
+
     document.querySelectorAll('.dropdown-content').forEach(d => {
       if(d !== dropdown) d.classList.remove('active');
     });
 
-    
     dropdown.classList.toggle('active');
   });
 });
+
+
+
 
 document.querySelectorAll('.course-title').forEach(title => {
   title.addEventListener('click', (e) => {

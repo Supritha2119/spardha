@@ -1018,13 +1018,15 @@ ul,
 
   .nav-list li:last-child {
     border-bottom: none;
+    color: blue;
+    font-size: 14px;
   }
 
   .nav a,
   .dropbtn {
-    display: block;
-    padding: 14px 16px;
+    display: inline-flex;
     font-size: 15px;
+    gap: 6px;
   }
 
   .dropdown-content {
@@ -1032,8 +1034,43 @@ ul,
     width: 100%;
     box-shadow: none;
     border-radius: 0;
+    display: none;
+    flex-direction: column;
   }
 
+  .dropdown-content.active {
+    display: block;
+}
+ .dropdown .dropbtn {
+    display: flex;                 /* overrides block */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown .dropbtn a {
+    display: inline-block;
+    padding: 0;
+    flex: 1;
+}
+
+.dropdown .dropbtn i {
+    display: inline-block;
+    font-size: 14px;
+}
+.sub-courses {
+    display: none;
+    padding-left: 15px;
+    
+}
+.sub-courses li a{
+   font-size: 14px;
+}
+
+.sub-courses.active {
+    display: block;
+}
+
+  
   .hamburger {
     display: block;
     position: absolute;
