@@ -203,4 +203,29 @@ counters.forEach(counter => {
     }
   };
   updateCount();
+
+  let currentSlide = 0;
+const slides = document.querySelectorAll('.about-images img');
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) slide.classList.add('active');
+    });
+}
+
+showSlide(currentSlide);
+
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 5000);
 });  

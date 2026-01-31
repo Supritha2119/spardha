@@ -621,6 +621,158 @@ ul,
     transform: scale(1.05);
 }
 
+
+.about-section {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f6faff, #eef5ff);
+}
+
+.about-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+    color:  #004aad;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.about-subtitle {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 40px 0 20px;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+    color:black;
+}
+
+
+.about-images {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto 40px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.about-images img {
+    width: 100%;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.about-images img.active {
+    display: block;
+}
+
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #0a2c5d;
+    background: rgba(255,255,255,0.8);
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+}
+
+.slider-arrow.left {
+    left: 10px;
+}
+
+.slider-arrow.right {
+    right: 10px;
+}
+
+.courses-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.course-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+}
+
+.course-card h4 {
+    color: #0a2c5d;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.course-fee {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 18px;
+    background: #0e6f64;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.course-card.highlight {
+    background: linear-gradient(135deg, #0a2c5d, #0e6f64);
+    color: #fff;
+}
+
+.course-card.highlight h4,
+.course-card.highlight p {
+    color: #fff;
+}
+
+.course-card.highlight .course-fee {
+    background: #ffffff;
+    color: #0a2c5d;
+}
+
+
+.about-points {
+    max-width: 800px;
+    margin: auto;
+    list-style: none;
+    padding: 0;
+}
+
+.about-points li {
+    background: #ffffff;
+    margin-bottom: 12px;
+    padding: 14px 18px;
+    border-left: 5px solid #0e6f64;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    font-size: 15px;
+}
+
+
 .whatsapp-chat {
   position: fixed;
   bottom: 90px;
