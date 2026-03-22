@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Banking Coaching | Sri Spardha Academy</title>
+    <meta name="description" content="Complete Karnataka Administrative Service (KAS) syllabus, exam pattern, services, and coaching details at Sri Spardha Academy Bangalore.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="statics/css/kas.css">
+    <script src="statics/script/kas.js"></script>
+
+    <style>
+   
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #eef2f3, #dfe9f3);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+
+.card {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+    margin-top: 12px;
+}
+
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0; 
+}
+
+
+.card:hover::after {
+    opacity: 1;
+    
+}
+
+
+.card > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.card:hover > * {
+    color: #fff;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.close {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close:hover {
+    color: red;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .card {
+        padding: 15px;
+        font-size: 14px;
+    }
+    .modal-content {
+        width: 90%;
+    }
+}
+</style>
+</head>
+
+<body>
+<a href="index.html" class="back-home"><i class="fa fa-arrow-left"></i> Back to Home</a>
+
+
+<section class="kas-hero">
+    <div class="kas-overlay">
+        <div class="kas-container">
+
+            <h1>BANKING</h1>
+
+            <p class="kas-subtitle">
+                Karnataka Public Service Commission (KPSC) conducts Karnataka Administrative Service (KAS),
+                the civil service of Karnataka State.
+            </p>
+
+            <div class="kas-meta">
+                <span>
+                    <i class="fa fa-clock"></i>
+                    Course Duration: <strong>7 to 8 Months</strong>
+                </span>
+            </div>
+
+            
+            <a href="https://chat.whatsapp.com/YOUR_GROUP_LINK"
+               target="_blank"
+               class="enroll-btn">
+                <i class="fab fa-whatsapp"></i> Enroll Now – Join WhatsApp Group
+            </a>
+
+            <!-- Cards -->
+            <div class="kas-cards">
+
+                <div class="kas-card">
+                    <div class="kas-card-title">Facilities Provided</div>
+                    <ul>
+                        <li>Daily 3 hours classroom teaching</li>
+                        <li>Weekly & monthly tests</li>
+                        <li>Current affairs handouts</li>
+                        <li>One-to-one mentoring</li>
+                    </ul>
+                </div>
+
+                <div class="kas-card">
+                    <div class="kas-card-title">Special Features</div>
+                    <ul>
+                        <li>Syllabus-oriented approach</li>
+                        <li>Exam-focused preparation</li>
+                        <li>Answer writing practice</li>
+                        <li>Guidance for beginners</li>
+                    </ul>
+                </div>
+
+                <div class="kas-card">
+                    <div class="kas-card-title">Why Sri Spardha Academy ?</div>
+                    <ul>
+                        <li>Experienced faculty</li>
+                        <li>Consistent results</li>
+                        <li>Student-centric mentoring</li>
+                        <li>Affordable fee structure</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<div class="container">
+    <h2>Bank Exam Syllabus</h2>
+
+    <div class="grid">
+
+        <!-- Card 1 -->
+        <div class="card" onclick="showDetails('Bank Exam Syllabus', `
+            <p>The Bank Exam Syllabus 2026 covers the core subjects tested in major banking exams such as SBI PO, IBPS PO, IBPS Clerk, SBI Clerk, and Cooperative Bank exams. The syllabus is designed to assess a candidate's analytical ability, numerical skills, language proficiency, and subject knowledge. While the syllabus remains mostly the same every year, minor updates may be introduced depending on the exam authority.</p>
+           
+        `)">
+        
+            Bank Exam Syllabus
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" onclick="showDetails('What subjects are included in the banking exam syllabus?', `
+           <p>The Banking Exam Syllabus generally includes Reasoning Ability, Quantitative Aptitude, English Language, General/Banking Awareness, and Professional Knowledge (for SO posts). These sections are common across most bank recruitment exams and test both speed and accuracy. A clear understanding of each section is essential to score well in competitive exams.  Bank Exam Syllabus for All Subjects   The Bank Exam Syllabus is divided into various sections to evaluate your proficiency in multiple areas. Each section carries a different weight in the exam, so understanding the syllabus of bank exam is essential for effective preparation. Candidates can check the reasoning syllabus for bank exam, english syllabus for bank exam, and quantitative aptitude syllabus for bank exam below. Reasoning Syllabus for Bank Exam   The Reasoning syllabus for bank exam is designed to test your logical and analytical thinking skills. This section plays a significant role in the overall score of your Bank PO Exam or Bank Clerk Exam. In 2026, the reasoning section is expected to cover topics such as:</p>
+            <ul>
+                <li>Puzzles</li>
+                <li>Seating Arrangement:Circular/Direction-based/MISC</li>
+                <li>Number Series</li>
+                <li>Odd man out</li>
+                <li>Coding-Decoding</li>
+                <li>Blood Relation</li>
+                <li>Analogy</li>
+                <li>Syllogism</li>
+                <li>Alphabet Test</li>
+                <li>Order & Ranking</li>
+                <li>Direction Sense</li>
+                <li>Figure Series</li> 
+                <li>Word Formation</li>
+                <li>Statement and Assumption</li>
+                <li>Assertion and Reason</li>
+                <li>Statement & Conclusion</li>
+                <li>Statement & Arguments</li>
+                <li>Statements and Action Courses</li>
+            </ul>
+            <p>A strong foundation in these topics will ensure you perform well in the reasoning section. Practice  with previous year's question papers to get a clear understanding of how questions are framed.</p>
+        `)">
+            What subjects are included in the banking exam syllabus?
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" onclick="showDetails('English Syllabus for Bank Exam', `
+            <p>The English syllabus for bank exam is designed to assess your command of the English language. This section tests your proficiency in grammar, vocabulary, reading comprehension, and more. To excel in this part of the banking exam syllabus, here are the key areas to focus on:</p>
+            <ul>
+                <li>Reading Comprehension</li>
+                <li>Grammar/Vyakaran</li>
+                <li>Spotting Errors</li>
+                <li>Fill in the Blanks</li>
+                <li>Misspelled Words</li>
+                <li>Jumbled Words</li>
+                <li>Rearrangement of Sentencs</li>
+                <li>Parajumbles</li>
+                <li>Cloze Tests</li>
+                <li>One Word Substitution</li>
+                <li>Idioms & Phrases</li>
+                <li>Synonyms & Antonyms</li>
+            </ul>
+            <p>For a comprehensive preparation, it is advisable to practice reading comprehension exercises and review grammar rules frequently. Using Bank Exam Syllabus books with practice exercises can help you improve your English language skills.</p>
+        `)">
+            English Syllabus for Bank Exam
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" onclick="showDetails('Quantitative Aptitude Syllabus for Bank Exam', `
+        <p>One of the most critical sections in the banking syllabus is Quantitative Aptitude. The Quantitative Aptitude syllabus for bank exam typically includes topics like:</p>
+            <ul>
+                <li>Number System</li>
+                <li>Data Interpretation-Bar Graph,Line Graph & Pie chart</li>
+                <li>Profit & Loss</li>
+                <li>HCF & LCM</li>
+                <li>Simple Interst & Compound Interst</li>
+                <li>Time & Work</li>
+                <li>Time & Distance</li>
+                <li>Decimal & fraction</li>
+                <li>Averages</li>
+                <li>Mensuration</li>
+                <li>Simplification</li>
+                <li>Partnership</li>
+                <li>Percentage</li>
+                <li>Ratio & Proportion</li>
+                <li>Case Studies Charts and Graphs</li>
+                <li>Permutation & Combination</li>
+                <li>Probability</li>
+            </ul>
+            <p>Focusing on time management and practicing regularly with mock tests will ensure you perform well in this section.</p>
+        `)">
+            Quantitative Aptitude Syllabus for Bank Exam
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card" onclick="showDetails('Professional Knowledge Syllabus for Bank Exam', `
+            <p>The Professional Knowledge syllabus for bank exam is crucial, particularly for those aspiring for specialized roles, such as Bank PO or Specialist Officers. This section evaluates your expertise in banking, finance, and economics. Topics under this syllabus include:</p>
+            <ul>
+                <li>Banking and Financial Awareness - Current events in Financial World, Monetary Policy, Budget, Economic Survey, Banking, Reforms in India, Bank Accounts of Special Individuals, Loans, Asset Reconstruction, Companies, Non Performing Assets, Restructuring of Loans, Bad Loans, Risk Management, BASEL I, BASEL II, BASEL III, and Organizations—RBI, SEBI, IMF, World Bank & Others</li>
+                <li>Economic and Financial Terminologies</li>
+                <li>Current Banking Events</li>
+                <li>Monetary Policy and Inflation</li>
+            </ul>
+            <p>If you're preparing for an SBI Bank Exam or any other cooperative bank exam, it's important to stay updated on current affairs and banking policies. Books related to banking syllabus will help you gain in-depth knowledge in this area.</p>
+        `)">
+            Professional Knowledge Syllabus for Bank Exam
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card" onclick="showDetails('General Awareness Syllabus for Bank Exam', `
+            <p>General awareness is another important section in the banking exam syllabus that focuses on current events, national and international affairs, and banking-related updates. Key areas to focus on include:</p>
+            <ul>
+                <li>Banking Awareness</li>
+                <li>Current Affairs National</li>
+                <li>International Current Affairs</li>
+                <li>Sports Abbreviations</li>
+                <li>Currencies & Capitals</li>
+                <li>General Science</li>
+                <li>Government Schemes & Policies</li>
+                <li>Awards and Honors</li>
+                <li>RBI</li>
+                <li>Books and Authors</li>
+                <li>National Parks & Sanctuaries</li>
+            </ul>
+            <p>For aspirants preparing for banking exams, subscribing to daily newspapers and keeping track of current affairs will ensure you stay informed about recent developments. For daily updates on current affairs, candidates must also read the Daily Current Affairs.</p>
+        `)">
+            General Awareness Syllabus for Bank Exam
+        </div>
+
+         <!-- Card 7 -->
+        <div class="card" onclick="showDetails('Bank Clerk Exam Syllabus', `
+           <p>The Bank Clerk Exam Syllabus is slightly less challenging than the Bank PO Exam Syllabus but still requires adequate preparation. The structure for bank clerk exam syllabus is similar to bank PO exam syllabus, but the level of difficulty is comparatively lower. The clerk banking syllabus includes:</p>
+           <ul>
+                <li>Reasoning and Aptitude</li>
+                <li>General Awareness</li>
+                <li>English Language</li>
+                <li>Computer Knowledge</li>
+            </ul>
+        `)">
+            Bank Clerk Exam Syllabus
+        </div>
+    <!-- Card 8 -->
+        <div class="card" onclick="showDetails('Bank PO Exam Syllabus', `
+           <p>The Bank PO Exam Syllabus is more challenging than the banking exam syllabus and demands a higher level of preparation. It includes more in-depth topics and a greater focus on professional knowledge and reasoning abilities. The primary sections in the Bank PO Exam syllabus are:</p>
+           <ul>
+                <li>Reasoning Ability</li>
+                <li>Quantitative Aptitude</li>
+                <li>General Awareness</li>
+                <li>English Language</li>
+                <li>Professional Knowledge</li>
+            </ul>
+            <p>While the structure is similar to that of the Bank Clerk exam, the difficulty level is significantly higher, and additional sections like Professional Knowledge play a crucial role in determining your overall score. Candidates must focus on honing their analytical and problem-solving skills to successfully tackle the more difficult questions in the PO exam.</p>
+        `)">
+            Bank PO Exam Syllabus
+        </div>
+
+        <!-- Card 9 -->
+        <div class="card" onclick="showDetails('Bank Manager Exam Syllabus', `
+           <p>The Bank Manager Exam Syllabus is designed to assess both managerial and technical knowledge, making it more comprehensive than the Clerk and PO exams. The syllabus for Bank Manager exams generally includes:</p>
+           <ul>
+                <li>Reasoning and Analytical Ability</li>
+                <li>Quantitative Aptitude</li>
+                <li>General Awareness and Banking Knowledge</li>
+                <li>English Language</li>
+                <li>Professional Knowledge(related to banking and finance)</li>
+            </ul>
+            <p>Unlike the Bank PO exam, which focuses more on aptitude and reasoning, the Bank Manager exam also places significant emphasis on a candidate's ability to manage banking operations and possess an in-depth understanding of banking products, services, and regulations.</p>
+             `)">
+           
+            Bank Manager Exam Syllabus
+        </div>
+
+       <!-- Card 10 -->
+         <div class="card" onclick="showDetails('Local Bank Officer Syllabus', `
+        <p>The Local Bank Officer (LBO) is a new post started by public sector banks to improve local banking services and reach more customers.Many banks are now hiring for this role. To prepare well, candidates must know the LBO syllabus, which includes subjects like Reasoning, Quantitative Aptitude, English, Data Analysis, Computer Knowledge, and General/Banking Awareness.</p>
+        <p>You can check the bank-wise syllabus from the links given below.</p>
+
+        <img src='images/bank.png' alt='bank'>
+       `)">
+        Local Bank Officer Syllabus
+    </div>
+
+    </div>
+</div>
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3 id="title"></h3>
+        <div id="description"></div>
+    </div>
+</div>
+
+
+
+
+<a href="#" id="whatsappChat" class="whatsapp-chat">
+  <i class="fab fa-whatsapp"></i>
+  <span>Live Chat</span>
+</a>
+
+<!-- Footer Section -->
+<footer class="footer-modern">
+    <div class="footer-wave"></div>
+    <div class="footer-wrap">
+
+        <!-- Brand & Info -->
+        <div class="footer-brand">
+            <h2>Sri Spardha Academy</h2>
+            <p>Shaping successful careers through expert coaching in Government exams.</p>
+            <div class="footer-badges">
+                <span>✔ Trusted Faculty</span>
+                <span>✔ Result Oriented</span>
+                <span>✔ Career Focused</span>
+            </div>
+            <a href="#" class="footer-cta">Enroll Now</a>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/groups/363117101235938/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/sri_spardha_academy/?hl=en"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@srispardhaacademy6932"><i class="fab fa-youtube"></i></a>
+                <a href="https://wa.me/91XXXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html" title="Sri Spardha Academy Home">Home</a></li>
+                <li><a href="index.html#courses" title="Courses Offered by Sri Spardha Academy">Courses</a></li>
+                <li><a href="index.html#about" title="About Sri Spardha Academy">About</a></li>
+                <li><a href="result.html" title="Our Successful Students">Achievements</a></li>
+                <li><a href="index.html#reviews" title="Review of Sri Spardha Academy">Reviews</a></li>
+                <li><a href="contact.html" title="Contact Sri Spardha Academy">Contact</a></li>
+                <li><a href="blog.html" title="Academy Blog">Blogs</a></li>
+            </ul>
+        </div>
+
+        <!-- Courses Section -->
+        <div class="footer-links">
+            <h4>Our Courses</h4>
+            <h3>Government Exams</h3>
+            <ul class="sub-courses">
+                <li><a href="kas.html">KAS</a></li>
+                <li><a href="banking.html">BANKING</a></li>
+                <li><a href="rrb.html">IBPS RRB PO</a></li>
+                <li><a href="ssc.html">SSC CGL</a></li>
+               
+            </ul>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="footer-contact">
+            <h4>Get in Touch</h4>
+            <p><i class="fa fa-location-dot"></i> 587, 3rd Floor, 100ft road, Balaji Layout, Dwaraka Nagar, Vajarahalli, Kanakapura Main Rd, Talaghattapura, Bengaluru, Karnataka 560062</p>
+            <p><i class="fa fa-phone"></i> +91 9901731785 / 9901731758</p>
+            <p><i class="fa fa-envelope"></i> info@srispardhaacademy.in</p>
+
+            <div class="footer-map">
+                <h4>Our Location</h4>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.5071742045766!2d77.5368341!3d12.875076000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3fdf3cf7cb43%3A0x67c605e70d157907!2sSri%20Spardha%20Academy%20Vajarahalli!5e0!3m2!1sen!2sin!4v1768219842078!5m2!1sen!2sin"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copy">
+        © 2026 Sri Spardha Academy. All Rights Reserved.
+    </div>
+</footer>
+<script>
+function showDetails(title, content) {
+    document.getElementById("title").innerText = title;
+    document.getElementById("description").innerHTML = content;
+    document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+document.getElementById("modal").addEventListener("click", function(e){
+    if(e.target === this) closeModal();
+});
+
+</script>
+</body>
+</html>  
